@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "nodemon server.js && next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js && next start",
+    "start": "concurrently \"node server.js\" \"next start\"",
     "lint": "next lint",
-     "export": "next export"
+    "export": "next export"
   },
   "dependencies": {
     "express": "^4.19.2",
@@ -19,6 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "nodemon": "^3.1.4",
