@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "next dev"
   },
   "dependencies": {
     "express": "^4.19.2",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@types/node": "^20",
