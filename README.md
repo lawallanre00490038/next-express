@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+React Quesry
+1. https://www.franciscomoretti.com/blog/how-to-use-react-query-in-next-js-client-components
+
+2. https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers
+
+3. https://youtu.be/NOvx4LB6Hfk
+
 ## Getting Started
     // "start": "NODE_ENV=production node server.js && next start",
 

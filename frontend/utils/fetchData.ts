@@ -2,7 +2,7 @@
 
 // Fetch function
 export const fetchMovies = async () => {
-  const response = await fetch('http://localhost:5000/api/custom/post/45',
+  const response = await fetch('/api/exp',
     {
       method: 'GET',
       headers: {

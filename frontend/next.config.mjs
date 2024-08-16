@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: '/api/exp',
-        destination: 'http://localhost:5000/api/exp',
+        destination: 'http://localhost:5000/api/custom/post/45'
       },
     ]
   },
