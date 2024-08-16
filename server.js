@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = 3000;
+const port = 5000;
 
 const server = express();
 
@@ -27,5 +27,5 @@ server.use(postRoute);
 
 server.listen(port, (err) => {
   if (err) throw err
-  console.log(`Runing on port ${port}, dev: ${dev}`)
+  console.log(`Runing on port ${port}`)
 })

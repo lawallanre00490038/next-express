@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon server.js && next dev",
-    "build": "next build",
-    "start": "concurrently \"node server.js\" \"next start\"",
-    "lint": "next lint",
-    "export": "next export"
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "express": "^4.19.2",

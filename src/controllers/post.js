@@ -1,9 +1,8 @@
 const { app } = require('../../server');
 
 const getPostById = (req, res) => {
-  const actualPage = '/post';
-  const queryParams = { id: req.params.id };
-  app.render(req, res, actualPage, queryParams);
+  req.params.id = req.params.id || 1;
+  res.json({ message: `Post ${req.params.id}` });
 };
 
 module.exports = { getPostById }; // Ensure it's exported as an object
