@@ -9,6 +9,8 @@
     "dev": "next dev"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.23",
+    "@tanstack/react-query-devtools": "^5.51.23",
     "express": "^4.19.2",
     "next": "14.2.5",
     "react": "^18",

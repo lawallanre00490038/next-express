@@ -1,25 +1,35 @@
-'use client'
-import React from 'react';
-import { useQuery } from 'react-query';
- 
+"use client";
+
+import React, { useEffect } from 'react';
+import { fetchMovies } from '@/utils/fetchData';
+import { useQuery } from '@tanstack/react-query';
+
 export default function SearchBar() {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['getTheData'],
+    queryFn: () => fetchMovies(),
+  });
 
-  const fetchData = async () => {
-    const response = await fetch('http://localhost:5000/api/exp');
-    return response.json();
-  };
+  console.log(data);
 
-  const { data, isLoading } = useQuery('data', fetchData);
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Sorry, there was an error</div>;
 
-  if (!isLoading) {
-    return <div>Loading...</div>;
-  }
 
- 
- 
   return (
     <div>
-      I am a search bar, {data}
+      I am a search bar of {data.message}
     </div>
-  )
+  );
 }
+
+
+  // const { data, isLoading, isError } = useQuery({
+  //   queryKey: ['getTheData'],
+  //   queryFn: () => fetch("http://localhost:5000/api/exp").then((res) => res.json()),
+  // });
+
+  // console.log(data);
+
+  // if (isLoading) return <div>Loading...</div>;
+  // if (isError) return <div>Sorry, there was an error</div>;

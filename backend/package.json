@@ -75,9 +75,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "frontend-build": "npm run build --prefix frontend",
-    "build": "npm run frontend-build"
+    "dev": "npm run server"
   },
   "keywords": [],
   "author": "",
