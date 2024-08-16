@@ -75,8 +75,9 @@
   "scripts": {
     "frontend-install": "npm install --prefix frontend",
     "frontend-build": "npm run build --prefix frontend",
-    "start": "node src/server.js",
-    "server": "nodemon src/server.js",
+    "start": "node server.js",
+    "frontend-start": "npm run start --prefix frontend",
+    "server": "nodemon server.js && npm run frontend-start",
     "frontend": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "build": "npm run frontend-build"
